@@ -371,3 +371,38 @@
   INFO [6dfe4f2b] Running /usr/bin/env echo "Branch master (at 5d71adce66535e2791f6d67300db7c310a737b5e) deployed as release 20160906092728 by webonise" >> $HOME/Deployment/revisions.log on 127.0.0.1
  DEBUG [6dfe4f2b] Command: cd $HOME/Deployment/releases && /usr/bin/env echo "Branch master (at 5d71adce66535e2791f6d67300db7c310a737b5e) deployed as release 20160906092728 by webonise" >> $HOME/Deployment/revisions.log
   INFO [6dfe4f2b] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-06 18:23:16 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e0690c9f] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [e0690c9f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e0690c9f] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-webpage-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-webpage-staging-webonise.sh 100.0%
+  INFO [6d8ac130] Running /usr/bin/env chmod 700 /tmp/git-ssh-webpage-staging-webonise.sh on 127.0.0.1
+ DEBUG [6d8ac130] Command: /usr/bin/env chmod 700 /tmp/git-ssh-webpage-staging-webonise.sh
+  INFO [6d8ac130] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [9b5bfe12] Running /usr/bin/env git ls-remote --heads git@github.com:sonalis-webonise/DevOps_Assignment.git on 127.0.0.1
+ DEBUG [9b5bfe12] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-webpage-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:sonalis-webonise/DevOps_Assignment.git )
+ DEBUG [9b5bfe12] 	ebd45d9d33ed67a64501752c7ee62f0d18d2ca66	refs/heads/master
+  INFO [9b5bfe12] Finished in 6.969 seconds with exit status 0 (successful).
+  INFO [3deffdf5] Running /usr/bin/env mkdir -p $HOME/Deployment/shared $HOME/Deployment/releases on 127.0.0.1
+ DEBUG [3deffdf5] Command: /usr/bin/env mkdir -p $HOME/Deployment/shared $HOME/Deployment/releases
+  INFO [3deffdf5] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [4c40f465] Running [ -f $HOME/Deployment/current/REVISION ] on 127.0.0.1
+ DEBUG [4c40f465] Command: [ -f $HOME/Deployment/current/REVISION ]
+ DEBUG [4c40f465] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [c37b330b] Running /usr/bin/env cat $HOME/Deployment/current/REVISION 2>/dev/null on 127.0.0.1
+ DEBUG [c37b330b] Command: /usr/bin/env cat $HOME/Deployment/current/REVISION 2>/dev/null
+ DEBUG [c37b330b] 	5d71adce66535e2791f6d67300db7c310a737b5e
+ DEBUG [c37b330b] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [15b82506] Running [ -f $HOME/Deployment/repo/HEAD ] on 127.0.0.1
+ DEBUG [15b82506] Command: [ -f $HOME/Deployment/repo/HEAD ]
+ DEBUG [15b82506] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at $HOME/Deployment/repo
+ DEBUG [ef4c082b] Running if test ! -d $HOME/Deployment/repo; then echo "Directory does not exist '$HOME/Deployment/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [ef4c082b] Command: if test ! -d $HOME/Deployment/repo; then echo "Directory does not exist '$HOME/Deployment/repo'" 1>&2; false; fi
+ DEBUG [ef4c082b] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [2450cf8c] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [2450cf8c] Command: cd $HOME/Deployment/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-webpage-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2450cf8c] 	Fetching origin

@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 set :application, 'webpage'
-set :repo_url, 'git@github.com:sonalis-webonise/DevOps_Assignment.git'
+set :repo_url, 'git@github.com:sonalis-webonise/Capistrano.git'
 set :branch, 'master'
 set :deploy_to, '$HOME/Deployment'
 
